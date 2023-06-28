@@ -1,0 +1,10 @@
+
+* {
+    width: 25%;
+    border: 1px solid;
+    color:black;
+    padding: .10em;	
+    margin: .10em;		
+    border-style: none;
+    background-color: antiquewhite;
+}

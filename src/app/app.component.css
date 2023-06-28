@@ -1,0 +1,79 @@
+.demo-inline-calendar-card {
+    width: 400px;
+    height: 400px;
+}
+
+.calender{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  .10em;
+    padding: .10em;	
+}
+
+.tittle {
+    background-color:aliceblue;
+    font-weight: bold;
+    padding: 1em;
+    text-align: center;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    border: 1px solid;
+    background-color: white ;
+    color:black;
+    padding: .10em;	
+    margin: .10em;		
+    border-style: none;
+}
+
+.leftblock{
+    width: 25%;
+    border: 1px solid;
+    color:black;
+    padding: .10em;	
+    margin: .10em;		
+    border-style: none;
+}
+
+.midblock{
+    width: 25%;
+    border: 1px solid;
+    color:black;
+    padding: .10em;	
+    margin: .10em;		
+    border-style: none;
+    background-color: bisque;
+}
+
+.rightblock{
+    width: 50%;
+    border: 1px solid;
+    color:black;
+    padding: .10em;	
+    margin: .10em;		
+    border-style: none;
+    background-color:cornsilk  ;
+}
+
+.mood{
+    background-color:floralwhite ;
+    border-radius: 5px;
+    color:black;
+    margin:  .10em;
+    margin-top: .50em;;
+    padding: .10em;		
+}
+
+.posts{
+    background-color:azure;
+    color:black;
+    padding: .90em;	
+    margin: .70em;		
+    border-style: none;
+    border-radius: 5px;
+}
+
+
