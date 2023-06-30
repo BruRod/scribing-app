@@ -1,10 +1,26 @@
 
 * {
-    width: 25%;
-    border: 1px solid;
-    color:black;
-    padding: .10em;	
-    margin: .10em;		
+    box-sizing: border-box;
+    border-radius: 5px;
     border-style: none;
-    background-color: antiquewhite;
+    padding: .10em;	
+    margin: .50em;
+    color:black;	
 }
+
+.showposts{
+    width:auto;
+    height: 350px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.showposts > h2 {
+    font-size: 16px;
+    
+}
+
+.showposts:hover{
+    background-color:lightgray;
+}
+

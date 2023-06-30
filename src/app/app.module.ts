@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -13,6 +14,7 @@ import { CalenderComponent } from './calender/calender.component';
 import { MoodComponent } from './mood/mood.component';
 import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PostListComponent } from './post-list/post-list.component';
     CalenderComponent,
     MoodComponent,
     PostComponent,
-    PostListComponent
+    PostListComponent,
+    PostDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { PostListComponent } from './post-list/post-list.component';
     MatCardModule,
     MatNativeDateModule,
     MatChipsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

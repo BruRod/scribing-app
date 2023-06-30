@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {Post} from '../post';
 import {PostsService} from '../posts.service';
 
@@ -9,6 +9,7 @@ import {PostsService} from '../posts.service';
 })
 export class PostComponent {
   
+  @Input() post?:Post;
   
   constructor(
     private postService: PostsService
