@@ -4,23 +4,52 @@
     border-radius: 5px;
     border-style: none;
     padding: .10em;	
-    margin: .50em;
-    color:black;	
+    margin: .10em;
 }
 
-.showposts{
-    width:auto;
-    height: 350px;
-    background-color: white;
-    overflow: hidden;
+
+.toolbar {
+    background-color: lightgray;
+    width: auto;
+    height: 5%;
+    display:block;
+    margin-top: 0;
+    padding-top: 0;
 }
 
-.showposts > h2 {
-    font-size: 16px;
-    
+
+.mood {
+    background-color: brown;
 }
 
-.showposts:hover{
+
+.post-item:hover{
     background-color:lightgray;
 }
 
+a {
+    text-decoration: none;
+}
+
+.post-item {
+    width:auto;
+    height: 110px;
+    margin: 0;
+    padding: 10px;
+    display: block;
+    background-color: white;
+    overflow: hidden;
+    border: 0.01em dotted;
+}
+
+.post-item > h2 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.post-item > h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}

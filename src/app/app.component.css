@@ -28,8 +28,8 @@ body {
 }
 
 .demo-inline-calendar-card {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    border-style: none;
 }
 
 .tittle {
@@ -50,29 +50,26 @@ body {
 
 .leftblock{
     width: 25%;
-    background-color: blanchedalmond;
+    background-color:rgb(252, 246, 233) ;
 }
 
 .midblock{
-    display: block;
-    align-content: justify;
     width: 25%;	
-    background-color: bisque;
     overflow: scroll;
-    
+    padding-top: 0;
+    margin-top: 0;
+    background-color:rgb(252, 246, 233) ;
 }
 
 .rightblock{
     width: 50%;
-    background-color:cornsilk  ;
+    background-color:rgb(252, 246, 233) ;
 }
 
 .mood{
     background-color:rgb(252, 246, 233) ;
+    height:auto;
+    border-style: solid;
+    border-color: white;
 }
-
-.posts{
-    background-color:azure;
-}
-
 

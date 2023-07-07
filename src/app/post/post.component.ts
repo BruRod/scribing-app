@@ -14,4 +14,7 @@ export class PostComponent {
   constructor(
     private postService: PostsService
   ) {}
+
+  
 }
+

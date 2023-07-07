@@ -10,9 +10,8 @@
       
       <div class="calender">
         <mat-card class="demo-inline-calendar-card">
-        <mat-calendar [(selected)]="selected"></mat-calendar>
+        <mat-calendar [(selected)]="selectedDate" routerLink=""></mat-calendar>
         </mat-card>
-        <!-- <p>Selected date: {{selected}}</p> -->
       </div>
       
       <div class="mood">
@@ -22,15 +21,12 @@
     </div>
 
     <div class="midblock">
-      <div class="post-list">
-        <app-post-list></app-post-list>
-      </div>  
+        <app-post-list [selectedDate]="selectedDate"></app-post-list> 
     </div>
 
     <div class="rightblock">
-      <div class="posts">
-        <app-post></app-post>
-      </div>  
+        <!-- <app-post-details></app-post-details> -->
+        <router-outlet></router-outlet>
     </div>
 
   </div>  

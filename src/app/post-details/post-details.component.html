@@ -1,13 +1,13 @@
 <p>post-details works!</p>
 
 
-post detail will come here!
-    <!-- <div  *ngIf="post">
-        <h2>{{post.date}}:  {{post.title}}</h2>
+post detail will come here! 
+    <div  *ngIf="post$ | async as post">
+        <h2>{{post.date}}:  {{post.title}},  {{post.id}}</h2>
         <div>
           <label for="post-label">Post text: </label>
-          <input id="post-label" [(ngModel)]="post.text" placeholder="text">
+          <input id="post-label" [(ngModel)]="post.text" placeholder="schreib einen text">
         </div>
       </div>
     
-     -->
+    
