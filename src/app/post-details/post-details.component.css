@@ -1,0 +1,22 @@
+
+*{
+    box-sizing: border-box;
+    display: block;
+    margin: 10px;
+    align-items: center;
+}
+
+#post-label{
+    height: 100%;
+    width:90%;
+}
+
+h2 {
+    /* margin: 10px; */
+}
+
+.toolbox{
+    height: 15%;
+    width:90%;
+    background-color:aliceblue;;
+}

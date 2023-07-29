@@ -1,7 +1,9 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import {Post} from '../post';
 import {PostsService} from '../posts.service';
+
 
 @Component({
   selector: 'app-post-list',
@@ -15,30 +17,37 @@ export class PostListComponent implements OnInit, OnChanges{
   dateString: string = "";
 
   constructor(private postService: PostsService) {}
-
-
-  getposts(): void {
+  
+  public getposts(): void {
     this.postService.getPosts()
         .subscribe(post => this.posts = post);
   }
 
   getpostsByDate(): void {
-    this.postService.getPostsByDate(this.dateString)
-        .subscribe(post => this.posts = post);
+    if (this.selectedDate != undefined) {
+      this.postService.getPostsByDate(this.dateString)
+         .subscribe(post => this.posts = post);
+    }
+    else {
+      this.getposts();
+    }
   }
  
   ngOnInit(): void {
-    this.updateDateString();
     this.getposts();
   }
 
   ngOnChanges(changes: SimpleChanges) {
     this.updateDateString();
-    this.getpostsByDate()
+    this.getpostsByDate();
   }
 
   updateDateString(): void{
     this.dateString = String(this.selectedDate?.toLocaleDateString());
+  }
+
+  public refreshposts(){
+    this.ngOnInit();
   }
 }
 

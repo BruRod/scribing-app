@@ -1,6 +1,6 @@
   
    
-    <a class="toolbar" routerLink="" (click)="getposts()"> insert here a Toolbar. Seleted Date is {{dateString}}</a>
+   
  
     <a class="post-item" *ngFor="let post of posts" [routerLink]="['/detail', post.id]">
         <h2>{{post.date}}, {{post.title}} </h2>
