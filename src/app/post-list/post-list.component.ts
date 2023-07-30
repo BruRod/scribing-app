@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Injectable } from '@angular/core';
 
 import {Post} from '../post';
 import {PostsService} from '../posts.service';
@@ -13,8 +12,8 @@ import {PostsService} from '../posts.service';
 export class PostListComponent implements OnInit, OnChanges{
 
   posts: Post[] = [];
-  @Input() selectedDate?: Date | null;
-  dateString: string = "";
+  @Input() selectedDate?: any;
+  dateString?: string | undefined = "";
 
   constructor(private postService: PostsService) {}
   
@@ -25,7 +24,7 @@ export class PostListComponent implements OnInit, OnChanges{
 
   getpostsByDate(): void {
     if (this.selectedDate != undefined) {
-      this.postService.getPostsByDate(this.dateString)
+      this.postService.getPostsByDate(this.dateString!)
          .subscribe(post => this.posts = post);
     }
     else {
@@ -43,7 +42,17 @@ export class PostListComponent implements OnInit, OnChanges{
   }
 
   updateDateString(): void{
-    this.dateString = String(this.selectedDate?.toLocaleDateString());
+    var month: string | number = ""; 
+    if (this.selectedDate?.getMonth() + 1 < 10)
+    {
+      month = "0" && (this.selectedDate?.getMonth() + 1) ;
+    }
+    else
+    {
+      month = (this.selectedDate?.getMonth() + 1) ;
+    }
+    this.dateString = this.selectedDate?.getFullYear() + "-0" + month  + "-" + this.selectedDate?.getDate();
+    console.log(this.dateString)
   }
 
   public refreshposts(){

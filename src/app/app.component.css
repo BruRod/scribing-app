@@ -54,14 +54,16 @@ body {
 }
 
 .midblock{
+    display: flex;
+    flex-direction: column;
     width: 25%;	
-    
     padding-top: 0;
     margin-top: 0;
     background-color:rgb(252, 246, 233) ;
 }
 
-midblock > .list{
+
+.list{
     overflow: scroll;
 }
 
@@ -77,3 +79,17 @@ midblock > .list{
     border-color: white;
 }
 
+
+.toolbar {
+    background-color: lightgray;
+    width: auto;
+    height: 5%;
+    display:block;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+a {
+    text-decoration: none;
+}

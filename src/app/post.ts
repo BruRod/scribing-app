@@ -1,8 +1,8 @@
 export interface Post {
     id: Number;
-    date: String;
-    time: String;
+    date: string;
+    time: string;
     mood: string;
     title: string;
-    text: String;
+    text: string;
   }

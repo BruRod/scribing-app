@@ -10,7 +10,7 @@
       
       <div class="calender">
         <mat-card class="demo-inline-calendar-card">
-        <mat-calendar [(selected)]="selectedDate" routerLink=""></mat-calendar>
+        <mat-calendar [dateClass]="dateClass()"  [(selected)]="selectedDate" routerLink=""></mat-calendar>
         </mat-card>
       </div>
       
@@ -23,12 +23,11 @@
 
     <div class="midblock">
       
-      <div>
-        <a class="toolbar" routerLink="" (click)="this.deleteDate()"> insert here a Toolbar.</a>
-      </div>
+      <a class="toolbar" routerLink="" (click)="this.deleteDate()"> insert here a Toolbar.</a>
+      
       <div class="list">
         <app-post-list [selectedDate]="selectedDate"></app-post-list> 
-        </div>
+      </div>
 
     </div>
 

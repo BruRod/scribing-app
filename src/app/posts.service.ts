@@ -19,14 +19,21 @@ export class PostsService {
   getPost(id: Number): Observable<Post> {
     // For now, assume that a Post with the specified `id` always exists.
     // Error handling is missing
-    const post = ListOfPosts.  find(h => h.id === id)!;
+    const post = ListOfPosts.find(h => h.id === id)!;
     return of(post);
   }
 
-  getPostsByDate(date: string): Observable<Post[]> {
+  getPostsByDate(date: string | undefined): Observable<Post[]> {
     // For now, assume that a Post with the specified `id` always exists.
     // Error handling is missing
     const posts = ListOfPosts.filter(h => h.date === date)!;
     return of(posts);
   }
+
+  getDatesFromPosts():  Observable<string[]> {
+    const dates = ListOfPosts.map(h => h.date);
+    return of(dates);
+  
+  }
 }
+
