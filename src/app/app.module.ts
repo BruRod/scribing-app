@@ -16,6 +16,9 @@ import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { AppRoutingModule } from './app-routing.module';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatChipsModule,
     FormsModule,
     AppRoutingModule,
+    MatButtonModule, 
+    MatMenuModule, 
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

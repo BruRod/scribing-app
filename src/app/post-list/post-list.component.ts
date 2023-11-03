@@ -14,13 +14,14 @@ export class PostListComponent implements OnInit, OnChanges{
   posts: Post[] = [];
   @Input() selectedDate?: any;
   dateString?: string | undefined = "";
-
+  itemselected: boolean =false;
   constructor(private postService: PostsService) {}
   
   public getposts(): void {
     this.postService.getPosts()
         .subscribe(post => this.posts = post);
   }
+
 
   getpostsByDate(): void {
     if (this.selectedDate != undefined) {
@@ -35,6 +36,7 @@ export class PostListComponent implements OnInit, OnChanges{
   ngOnInit(): void {
     this.getposts();
   }
+
 
   ngOnChanges(changes: SimpleChanges) {
     this.updateDateString();
@@ -52,11 +54,11 @@ export class PostListComponent implements OnInit, OnChanges{
       month = (this.selectedDate?.getMonth() + 1) ;
     }
     this.dateString = this.selectedDate?.getFullYear() + "-0" + month  + "-" + this.selectedDate?.getDate();
-    console.log(this.dateString)
+    //console.log(this.dateString)
   }
 
-  public refreshposts(){
-    this.ngOnInit();
+  ItemSelect(): void {
+    this.itemselected = true;  
   }
 }
 

@@ -23,8 +23,32 @@
 
     <div class="midblock">
       
-      <a class="toolbar" routerLink="" (click)="this.deleteDate()"> insert here a Toolbar.</a>
-      
+      <div class="toolbar">
+        <a class="reset" routerLink="" (click)="this.deleteDate()">reset</a>
+        
+        <button class="add-post" mat-icon-button aria-label="Add a post">
+          <mat-icon>add box icon</mat-icon>
+        </button>
+        
+        <button class="more" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Iicon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>delete</mat-icon>
+            <span>Delete</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>tag</mat-icon>
+            <span>Tag</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon> drive eta icon</mat-icon>
+            <span>Template</span>
+          </button>
+        </mat-menu>
+      </div>
+
       <div class="list">
         <app-post-list [selectedDate]="selectedDate"></app-post-list> 
       </div>

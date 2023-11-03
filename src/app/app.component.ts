@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {MatCalendarCellCssClasses} from '@angular/material/datepicker';
 import {PostsService} from './posts.service';
 
@@ -12,7 +11,7 @@ export class AppComponent implements OnInit{
   title = 'scribing-app';
   selectedDate: any;
   
-  datesToHighlight: string[] |  number[] | Date[] = ["2023-07-20", "2023-07-21"];
+  datesToHighlight: string[] |  number[] | Date[] = [];
 
   constructor(private postService: PostsService) { }
   
